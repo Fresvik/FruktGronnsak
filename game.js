@@ -65,6 +65,15 @@ function setup() {
         boks.tegn(ctx, ord.ord);
     }
     
+    function poeng(a, target) {
+        if (target === 0 && a.x < 175) {
+            poeng += 1;
+        } else if (target === 1 && a.x > 175) {
+            poeng += 1;
+        } else { poeng += 0;
+        }
+    }
+    
     function visPoeng() {
         spanPTeller.innerHTML = "Du har " + poeng + " Poeng";
     }
